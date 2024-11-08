@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage(''),
+                  backgroundImage: AssetImage('assets/gorrissse.jpg'),
                 ),
                 SizedBox(height: 10),
                 Text(

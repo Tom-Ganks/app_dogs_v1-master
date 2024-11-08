@@ -161,9 +161,6 @@ class PessoaEditPageState extends State<PessoaEditPage> {
                           if (value == null || value.isEmpty) {
                             return 'Por favor entre com o Email';
                           }
-                          if (int.tryParse(value) == null) {
-                            return 'Por favor entre com um Email válido';
-                          }
                           return null;
                         },
                       ),
@@ -181,9 +178,6 @@ class PessoaEditPageState extends State<PessoaEditPage> {
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Por favor seu Endereço, Avenida ou Rua';
-                          }
-                          if (int.tryParse(value) == null) {
-                            return 'Por favor entre endereço válido';
                           }
                           return null;
                         },
@@ -225,9 +219,6 @@ class PessoaEditPageState extends State<PessoaEditPage> {
                           if (value == null || value.isEmpty) {
                             return 'Por favor Insira o nome de sua Cidade';
                           }
-                          if (int.tryParse(value) == null) {
-                            return 'Por favor entre com uma cidade válida';
-                          }
                           return null;
                         },
                       ),
@@ -267,9 +258,6 @@ class PessoaEditPageState extends State<PessoaEditPage> {
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Por favor insira seu Estado';
-                          }
-                          if (int.tryParse(value) == null) {
-                            return 'Por favor entre com um Estado válido';
                           }
                           return null;
                         },

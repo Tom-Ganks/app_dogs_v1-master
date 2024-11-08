@@ -14,7 +14,7 @@ class PessoaRepository {
 
   Future<List<Pessoa>> getPessoas() async {
     final db = await DatabaseHelper.initDb();
-    final List<Map<String, Object?>> pessoaMaps = await db.query('pessoas');
+    final List<Map<String, Object?>> pessoaMaps = await db.query('pessoa');
     return pessoaMaps.map((map) {
       return Pessoa(
           id: map['id'] as int,
