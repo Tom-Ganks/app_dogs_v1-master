@@ -1,3 +1,4 @@
+import 'package:app_dogs/presentation/pages/pessoas/pessoa_details_page.dart';
 import 'package:app_dogs/presentation/pages/pessoas/pessoa_edit_page.dart';
 import 'package:app_dogs/presentation/pages/pessoas/pessoa_page_form.dart';
 import 'package:app_dogs/presentation/viewmodels/pessoa_viewmodel.dart';
@@ -98,7 +99,29 @@ class PessoaPageState extends State<PessoaPage> {
                           fontSize: 18,
                         ),
                       ),
-                      subtitle: Text('Telefone: ${pessoa.telefone}'),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Telefone: ${pessoa.telefone}'),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      PessoaDetailsPage(pessoa: pessoa),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              'Mais Detalhes',
+                              style: TextStyle(
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
