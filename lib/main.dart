@@ -1,8 +1,7 @@
 import 'dart:io';
+import 'package:app_dogs/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-
-import 'presentation/pages/home_page.dart';
 
 void main() {
   // Verifique se está em um ambiente desktop (Windows, Linux, macOS)
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
